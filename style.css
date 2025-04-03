@@ -92,3 +92,20 @@ button:hover {
 .hidden {
     display: none;
 }
+select:disabled {
+    opacity: 0.7;
+    background: #f5f5f5;
+}
+
+#loading {
+    margin: 15px 0;
+    font-style: italic;
+    color: #e74c3c;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
