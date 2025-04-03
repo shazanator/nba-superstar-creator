@@ -12,41 +12,69 @@
         <p id="subtitle">Mix & match skills from the GOATs—just don't blame us if your creation is busted.</p>
         
         <div id="player-selection">
-            <h2>Step 1: Random GOATs</h2>
-            <p>Here are 6 random legends. Pray you get MJ.</p>
-            <div id="random-players" class="player-grid"></div>
-            
-            <h2>Step 2: Build Your Superstar</h2>
             <div id="attribute-selectors">
                 <div class="attribute">
                     <label>🔥 Scoring: </label>
-                    <select id="scoring-select"></select>
+                    <select id="scoring-select">
+                        <option value="">-- Pick a scorer --</option>
+                    </select>
+                    <p class="attribute-hint">Who gets buckets when it matters? (Or chokes like 2011 LeBron?)</p>
                 </div>
+                
                 <div class="attribute">
                     <label>🛡️ Defense: </label>
-                    <select id="defense-select"></select>
+                    <select id="defense-select" disabled>
+                        <option value="">-- Pick a defender --</option>
+                    </select>
+                    <p class="attribute-hint">Choose someone who actually tries on defense (unlike 2017 Harden)</p>
                 </div>
+                
                 <div class="attribute">
                     <label>🎯 Assisting: </label>
-                    <select id="assist-select"></select>
+                    <select id="assist-select" disabled>
+                        <option value="">-- Pick a passer --</option>
+                    </select>
+                    <p class="attribute-hint">Magic or Westbrook? (One makes teammates better, the other makes them spectators)</p>
                 </div>
+                
                 <div class="attribute">
                     <label>💪 Rebounding: </label>
-                    <select id="rebound-select"></select>
+                    <select id="rebound-select" disabled>
+                        <option value="">-- Pick a rebounder --</option>
+                    </select>
+                    <p class="attribute-hint">Because someone needs to clean up your bricked threes</p>
                 </div>
+                
                 <div class="attribute">
                     <label>Name Your Creation: </label>
-                    <input type="text" id="player-name" placeholder="e.g., 'Air Bagel'">
+                    <input type="text" id="player-name" placeholder="e.g., 'Air Bagel' or 'LeBronto Raptor'">
+                    <p class="attribute-hint">Give your abomination a name worthy of ESPN hype</p>
                 </div>
             </div>
+            
+            <div id="loading" class="hidden">
+                <p>🔮 Calculating your player's destiny...</p>
+            </div>
+            
             <button id="create-player">🚀 Launch My Superstar!</button>
         </div>
         
         <div id="result" class="hidden">
             <h2>🌟 <span id="created-name"></span> 🌟</h2>
+            <div id="player-stats"></div>
             <p id="player-rating"></p>
             <p id="player-comment"></p>
-            <button id="try-again">🔁 Try Again (You’ll Need It)</button>
+            <button id="try-again">🔁 Try Again (You'll Need It)</button>
+        </div>
+        
+        <div id="current-picks">
+            <h3>Your Selections:</h3>
+            <ul>
+                <li id="scoring-pick">Scoring: Not chosen</li>
+                <li id="defense-pick">Defense: Not chosen</li>
+                <li id="assist-pick">Assists: Not chosen</li>
+                <li id="rebound-pick">Rebounding: Not chosen</li>
+            </ul>
         </div>
     </div>
 
