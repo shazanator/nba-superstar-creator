@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Superstar Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🏀 Build Your NBA LEGEND 🏀</h1>
+        <p id="subtitle">Mix & match skills from the GOATs—just don't blame us if your creation is busted.</p>
+        
+        <div id="player-selection">
+            <h2>Step 1: Random GOATs</h2>
+            <p>Here are 6 random legends. Pray you get MJ.</p>
+            <div id="random-players" class="player-grid"></div>
+            
+            <h2>Step 2: Build Your Superstar</h2>
+            <div id="attribute-selectors">
+                <div class="attribute">
+                    <label>🔥 Scoring: </label>
+                    <select id="scoring-select"></select>
+                </div>
+                <div class="attribute">
+                    <label>🛡️ Defense: </label>
+                    <select id="defense-select"></select>
+                </div>
+                <div class="attribute">
+                    <label>🎯 Assisting: </label>
+                    <select id="assist-select"></select>
+                </div>
+                <div class="attribute">
+                    <label>💪 Rebounding: </label>
+                    <select id="rebound-select"></select>
+                </div>
+                <div class="attribute">
+                    <label>Name Your Creation: </label>
+                    <input type="text" id="player-name" placeholder="e.g., 'Air Bagel'">
+                </div>
+            </div>
+            <button id="create-player">🚀 Launch My Superstar!</button>
+        </div>
+        
+        <div id="result" class="hidden">
+            <h2>🌟 <span id="created-name"></span> 🌟</h2>
+            <p id="player-rating"></p>
+            <p id="player-comment"></p>
+            <button id="try-again">🔁 Try Again (You’ll Need It)</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
